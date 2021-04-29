@@ -1,3 +1,2 @@
 conflix fixed
-s
-dd
+s conflict fixed

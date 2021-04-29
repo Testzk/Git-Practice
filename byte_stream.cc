@@ -77,6 +77,8 @@ bool ByteStream::eof() const {
         return false;
 }
 
+Testzk Add some code
+
 size_t ByteStream::bytes_written() const { return _accumuWritten; }
 
 size_t ByteStream::bytes_read() const { return _accumuRead; }

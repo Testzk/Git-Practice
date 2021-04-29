@@ -82,3 +82,5 @@ size_t ByteStream::bytes_written() const { return _accumuWritten; }
 size_t ByteStream::bytes_read() const { return _accumuRead; }
 
 size_t ByteStream::remaining_capacity() const { return _cap-_length; }
+
+Testzk Add some code

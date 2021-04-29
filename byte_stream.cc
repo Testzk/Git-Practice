@@ -52,7 +52,7 @@ std::string ByteStream::read(const size_t len) {
     return result;
 }
 
-void ByteStream::end_input() {_isEnd=true;}
+void ByteStream::end_input() {_isEnd=true;}//zhushi
 
 bool ByteStream::input_ended() const { 
     if (_isEnd==1)
@@ -61,7 +61,7 @@ bool ByteStream::input_ended() const {
         return false;
 }
 
-size_t ByteStream::buffer_size() const { return _length; }
+size_t ByteStream::buffer_size() const { return _length; }//zhushi
 
 bool ByteStream::buffer_empty() const { 
     if (_length==0)
@@ -71,7 +71,7 @@ bool ByteStream::buffer_empty() const {
 }
 
 bool ByteStream::eof() const {
-    if (input_ended() && _length==0)
+    if (input_ended() && _length==0) //zhushi
         return true;
     else
         return false;

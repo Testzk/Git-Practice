@@ -15,7 +15,10 @@ using namespace std;
 ByteStream::ByteStream(const size_t capacity):_cap(capacity) { 
     _stream.resize(capacity);
 }
-
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
 size_t ByteStream::write(const string &data) {
     size_t writedDataNum = min(data.size(),_cap-_length);
     for(size_t i = 0;i<writedDataNum;i++){
@@ -25,15 +28,35 @@ size_t ByteStream::write(const string &data) {
     _accumuWritten+=writedDataNum;
     return writedDataNum;
 }
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
 
 //! \param[in] len bytes will be copied from the output side of the buffer
 string ByteStream::peek_output(const size_t len) const {
     string result;
     size_t lenCur = min(len,_length);
     for(size_t i=0;i<lenCur;i++)
+//! \param[in] len bytes will be copied from the output side of the buffer
         result.push_back(_stream[(_beginIndex+i)%_cap]);
     return result;
 }
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
+//! \param[in] len bytes will be copied from the output side of the buffer
 
 //! \param[in] len bytes will be removed from the output side of the buffer
 void ByteStream::pop_output(const size_t len) { 
@@ -42,6 +65,7 @@ void ByteStream::pop_output(const size_t len) {
     _length-=popsize;
     _accumuRead+=popsize;
 }
+//! \param[in] len bytes will be copied from the output side of the buffer
 
 //! Read (i.e., copy and then pop) the next "len" bytes of the stream
 //! \param[in] len bytes will be popped and returned
